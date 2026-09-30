@@ -1,0 +1,15 @@
+FR
+	Domain Specification
+NFR
+Performance: Response time, throughput, or latency targets
+Security: Protection against unauthorized access and security threats
+Usability: Ease of use and user experience
+Reliability: System stability, availability, and failure recovery
+Scalability: Ability to handle increasing users, traffic, or data
+Maintainability: Ease of updating, modifying, and fixing the system
+Portability: Ability to run across different environments or platforms
+
+---
+Module
+	 -> CPU
+	 -> Data

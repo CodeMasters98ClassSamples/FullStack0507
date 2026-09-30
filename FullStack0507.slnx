@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="DomainSpecification.txt" />
+  </Folder>
+  <Project Path="FullStack0507.AppHost/FullStack0507.AppHost.csproj" />
+  <Project Path="FullStack0507.MyWebApi/FullStack0507.MyWebApi.csproj" />
+  <Project Path="FullStack0507.ServiceDefaults/FullStack0507.ServiceDefaults.csproj" />
+</Solution>
