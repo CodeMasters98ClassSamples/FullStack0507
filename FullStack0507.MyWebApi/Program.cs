@@ -1,3 +1,6 @@
+using FullStack0507.MyWebApi.Intefaces;
+using FullStack0507.MyWebApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -12,7 +15,12 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//packages , Framework , IOC Container
+builder.Services.AddScoped<IProductService,ProductService>();
+
+//before -> Service Collection
 var app = builder.Build();
+//Afte -> Service Provider
 
 app.MapDefaultEndpoints();
 

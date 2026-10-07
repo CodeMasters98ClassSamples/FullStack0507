@@ -1,4 +1,4 @@
-FR
+﻿FR
 	Domain Specification
 NFR
 Performance: Response time, throughput, or latency targets
@@ -9,7 +9,26 @@ Scalability: Ability to handle increasing users, traffic, or data
 Maintainability: Ease of updating, modifying, and fixing the system
 Portability: Ability to run across different environments or platforms
 
+
+blue print -> نقشه راه
+	- inteface
+	- abstact class
+
+Decomposition
+	-> Responsibility
+
+Single Responsibility
 ---
 Module
 	 -> CPU
 	 -> Data
+
+پیچیدگی
+	-> Tech stack -> vibe coding
+	-> Business
+
+- Jalase 02
+	- Cnotroller
+	- Input & output
+	- DI , IOC , inversion of control
+	- Service , Model

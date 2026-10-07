@@ -1,6 +1,0 @@
-@FullStack0507.MyWebApi_HostAddress = http://localhost:5267
-
-GET {{FullStack0507.MyWebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
