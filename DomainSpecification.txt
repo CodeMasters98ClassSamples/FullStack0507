@@ -32,3 +32,41 @@ Module
 	- Input & output
 	- DI , IOC , inversion of control
 	- Service , Model
+
+Data ->
+	Data Application
+		-> Connect
+		-> Command/Query
+
+	Data Application
+		-> Database: Sql Server -> TSQL
+			-> approach
+			-> Tools
+			-> Libraries
+			-> Framework
+		-> Messaging
+			-> approach
+			-> Tools
+				-> RabbitMq
+			-> Libraries
+				-> Rabbit.Client
+			-> Framework
+				-> masstratnsit
+		-> Cacheing
+			-> approach
+		-> stream
+			-> approach
+
+ORM
+	-> Map Class to Table
+	-> no dependency to provider (Sql server, Pos, Db2, Oracel,...)
+	-> Abstraction
+		-> insert into Product(id,name,price) values (1, 'Test', 10000)
+
+Next Session:
+	+ Result Pattern
+	+ Problem Detail
+	+ ORM -> Configuration
+	+ Refactor => IProductService
+	+ Health Check , Readiness , Liveness
+	+ Versioning

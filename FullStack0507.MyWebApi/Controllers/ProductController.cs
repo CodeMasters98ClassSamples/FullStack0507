@@ -36,10 +36,9 @@ public class ProductController : ControllerBase
             Price = dto.price,
             Description = dto.description,
             Name = dto.name,
+            Barcode = dto.barcode,
         };
         int result = _productService.AddProduct(product);
-
-        //Work with Database
 
         return Ok(new AddProductResponse()
         {
@@ -56,19 +55,25 @@ public class ProductController : ControllerBase
             Description = description,
             Name = name,
         };
+        bool result = _productService.Update(product);
+
         return "";
     }
 
-
     [HttpGet]
-    public string GetById(int id)
+    public async Task<IActionResult> GetById(int id)
     {
-        return "Product 1";
+        Product? result = _productService.GetProductById(id);
+        if (result is null)
+            return NotFound();
+
+        return Ok(result);
     }
 
     [HttpGet]
-    public string GetAll()
+    public async Task<IActionResult> GetAll()
     {
-        return "Product 1";
+        List<Product> result = _productService.GetAll();
+        return Ok(result);
     }
 }

@@ -1,5 +1,7 @@
+using FullStack0507.MyWebApi.Data;
 using FullStack0507.MyWebApi.Intefaces;
 using FullStack0507.MyWebApi.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,24 @@ builder.Services.AddSwaggerGen();
 
 //packages , Framework , IOC Container
 builder.Services.AddScoped<IProductService,ProductService>();
+
+bool develop = true;
+if (develop)
+{
+
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseInMemoryDatabase("AppDbContextInMemory"));
+}
+else
+{
+    string connectionString = builder.Configuration.GetConnectionString("AppDbContext") ??
+    throw new InvalidOperationException("Connection string 'AppDbContext' not found.");
+
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(connectionString));
+}
+
+
 
 //before -> Service Collection
 var app = builder.Build();
