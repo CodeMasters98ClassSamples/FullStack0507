@@ -14,7 +14,7 @@ public class ProductService : IProductService
         _appDbContext = appDbContext;
     }
 
-    public int AddProduct(Product product)
+    public int Add(Product product)
     {
         //object
         //Work with Database
@@ -28,7 +28,7 @@ public class ProductService : IProductService
 
         return product.Id;
     }
-
+    
     public bool Delete(int id)
     {
         var product = _appDbContext.Products.FirstOrDefault(x => x.Id == id);
@@ -42,6 +42,16 @@ public class ProductService : IProductService
     {
         var products = _appDbContext.Products.ToList();
         return products;
+    }
+
+    public List<Product> GetAll()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Product? GetById(int id)
+    {
+        throw new NotImplementedException();
     }
 
     public Product GetProductById(int id)

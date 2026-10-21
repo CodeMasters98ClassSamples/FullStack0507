@@ -1,8 +1,11 @@
-﻿using FullStack0507.MyWebApi.Dtos;
+﻿using Asp.Versioning;
+using FullStack0507.MyWebApi.Dtos;
 using FullStack0507.MyWebApi.Intefaces;
 using FullStack0507.MyWebApi.Models;
 using FullStack0507.MyWebApi.Services;
+using FullStack0507.MyWebApi.Wrappers;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace FullStack0507.MyWebApi.Controllers;
 
@@ -10,8 +13,9 @@ namespace FullStack0507.MyWebApi.Controllers;
 //bueatifull url
 //https://localhost:7004/Product/AddProduct
 //DRY => Naming
+[ApiVersion(1)]
 [ApiController]
-[Route("[controller]/[action]")]
+[Route("v{v:apiVersion}/[controller]/[action]")]
 public class ProductController : ControllerBase
 {
     //Design Pattern -> Resuable code
@@ -29,6 +33,10 @@ public class ProductController : ControllerBase
     {
         //SaveData -> Data Application (Database, cache , file , .. , queue)
 
+        if (dto.price <= 0)
+        {
+            return BadRequest(Result.Failure(Error.InValidPrice, status: HttpStatusCode.BadRequest));
+        }
         //Map Dto -> Model
         //Extension method, Package -> mapster , automapper
         Product product = new Product()
@@ -38,12 +46,9 @@ public class ProductController : ControllerBase
             Name = dto.name,
             Barcode = dto.barcode,
         };
-        int result = _productService.AddProduct(product);
+        var result = Result.Success(_productService.AddProduct(product));
 
-        return Ok(new AddProductResponse()
-        {
-            Id = result,
-        });
+        return Ok(result);
     }
 
     [HttpPut]

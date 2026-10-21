@@ -63,10 +63,54 @@ ORM
 	-> Abstraction
 		-> insert into Product(id,name,price) values (1, 'Test', 10000)
 
-Next Session:
+-> .Net developer -> Cload develper
+
+Infa as a service
+Infa
+	Windows
+		-> Network -> ex: Zabbix
+		-> Ram
+		-> Cpu
+Stack
+	.NET
+	Dependancy:
+		Sql Server (as a service)
+		RabbitMq (as a service)
+		Redis (as a service)
+
 	+ Result Pattern
+		200
+		{
+			"isSuccess" : true,
+			"message": "Successfull login!",
+			"Data": { list users },
+			"Error" : {}
+		}
 	+ Problem Detail
+		300 , 400 , 500
 	+ ORM -> Configuration
 	+ Refactor => IProductService
-	+ Health Check , Readiness , Liveness
+	+ Healthy?
+		-> Health Check , 
+		-> Readiness , 
+		   Liveness
+		-> Alert!
+		-> Log!
 	+ Versioning
+		-> when: Input , output , address
+		-> how: package
+
+    + prevent breaking change 
+
+
++ project
+	+ Human readbale
+	+ AI Readable
+
+Next Session:
+	+ DDD ?
+		-> imp
+	+ Architecture ? 
+	+ HLD vs LLD
+	+ Architecture Pattern vs style
+		-> Imp

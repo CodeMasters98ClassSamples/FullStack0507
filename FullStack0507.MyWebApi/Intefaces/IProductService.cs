@@ -1,13 +1,13 @@
-﻿using FullStack0507.MyWebApi.Models;
+﻿using FullStack0507.MyWebApi.Contracts;
+using FullStack0507.MyWebApi.Models;
 
-namespace FullStack0507.MyWebApi.Intefaces
+namespace FullStack0507.MyWebApi.Intefaces;
+
+public interface IProductService : ICustomService<Product>
 {
-    public interface IProductService
-    {
-        int AddProduct(Product product);
-        Product? GetProductById(int id);
-        List<Product> GetAll();
-        bool Update(Product product);
-        bool Delete(int id);
-    }
+    int Add(Product product);
+    Product? GetById(int id);
+    List<Product> GetAll();
+    bool Update(Product item);
+    bool Delete(int id);
 }
