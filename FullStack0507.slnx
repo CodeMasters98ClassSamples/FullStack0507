@@ -2,7 +2,25 @@
   <Folder Name="/docs/">
     <File Path="DomainSpecification.txt" />
   </Folder>
-  <Project Path="FullStack0507.AppHost/FullStack0507.AppHost.csproj" />
-  <Project Path="FullStack0507.MyWebApi/FullStack0507.MyWebApi.csproj" />
-  <Project Path="FullStack0507.ServiceDefaults/FullStack0507.ServiceDefaults.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/BasketService/" />
+  <Folder Name="/src/ProductService/">
+    <Project Path="FullStack0507.MyInfrastructure/FullStack0507.MyInfrastructure.csproj" Id="a947108c-e659-4aa8-bedb-2766fe49ca57" />
+  </Folder>
+  <Folder Name="/src/ProductService/Core/" />
+  <Folder Name="/src/ProductService/Core/Application/">
+    <Project Path="FullStack0507.MyApplication/FullStack0507.MyApplication.csproj" Id="979c88d2-616a-47d3-b865-8cda026c9d1b" />
+  </Folder>
+  <Folder Name="/src/ProductService/Core/Domain/">
+    <Project Path="FullStack0507.MyDomain/FullStack0507.MyDomain.csproj" Id="1cc7fd7d-d4df-4049-a9bb-9b8adffc3f2e" />
+  </Folder>
+  <Folder Name="/src/ProductService/Presentation/">
+    <Project Path="FullStack0507.AppHost/FullStack0507.AppHost.csproj" />
+    <Project Path="FullStack0507.MyStoreWebApi/FullStack0507.MyStoreWebApi.csproj" />
+    <Project Path="FullStack0507.MyWebApi/FullStack0507.MyWebApi.csproj" />
+    <Project Path="FullStack0507.ServiceDefaults/FullStack0507.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="FullStack0507.MySharedPresentation/FullStack0507.MySharedPresentation.csproj" Id="afad2406-89c9-4003-a139-9b7796b1de5d" />
+  </Folder>
 </Solution>

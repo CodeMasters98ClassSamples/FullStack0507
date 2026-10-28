@@ -1,7 +1,7 @@
 ﻿using FullStack0507.MyWebApi.Wrappers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FullStack0507.MyWebApi.Extensions;
+namespace FullStack0507.MySharedPresentation.Extensions;
 
 public static class ResultExtensions
 {

@@ -1,5 +1,5 @@
-﻿using FullStack0507.MyWebApi.Contracts;
-using FullStack0507.MyWebApi.Models;
+﻿using FullStack0507.MyDomain.Entites;
+using FullStack0507.MyApplication.Contracts;
 
 namespace FullStack0507.MyWebApi.Intefaces;
 

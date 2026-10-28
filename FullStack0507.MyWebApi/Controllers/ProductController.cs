@@ -1,8 +1,7 @@
 ﻿using Asp.Versioning;
+using FullStack0507.MyDomain.Entites;
 using FullStack0507.MyWebApi.Dtos;
 using FullStack0507.MyWebApi.Intefaces;
-using FullStack0507.MyWebApi.Models;
-using FullStack0507.MyWebApi.Services;
 using FullStack0507.MyWebApi.Wrappers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -46,7 +45,7 @@ public class ProductController : ControllerBase
             Name = dto.name,
             Barcode = dto.barcode,
         };
-        var result = Result.Success(_productService.AddProduct(product));
+        var result = Result.Success(_productService.Add(product));
 
         return Ok(result);
     }
@@ -68,7 +67,7 @@ public class ProductController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetById(int id)
     {
-        Product? result = _productService.GetProductById(id);
+        Product? result = _productService.GetById(id);
         if (result is null)
             return NotFound();
 

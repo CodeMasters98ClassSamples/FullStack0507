@@ -28,6 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FullStack0507.MyApplication\FullStack0507.MyApplication.csproj" />
+    <ProjectReference Include="..\FullStack0507.MyInfrastructure\FullStack0507.MyInfrastructure.csproj" />
     <ProjectReference Include="..\FullStack0507.ServiceDefaults\FullStack0507.ServiceDefaults.csproj" />
   </ItemGroup>
 

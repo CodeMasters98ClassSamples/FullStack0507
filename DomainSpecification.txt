@@ -102,15 +102,68 @@ Stack
 
     + prevent breaking change 
 
++ contarct
+	- internal
+	- external
 
 + project
 	+ Human readbale
 	+ AI Readable
 
++ Fundamentals of Software Architecture
+	=> Chapter 1
++ Domain-Driven_Design__Tackling_Complexity_in_the_Heart_of_Software
+	=> Chapter 1
+
+
+	+ Style
+	+ Pattern
+	+ Architecture ? 
+	+ Architecture Pattern vs style
+
+
+
+Modular Monolithic + CQRS + Domain Centeric Architetcure -> clean architecture
+Microservice + CQRS + Clean Architecture + Circuit Breaker
+EDA Microservice
+
+Microservice & DDD
+
++ Layer
+	-> Project
+		-> exe
+		-> dll
+	-> Folder
+
++ Domain Centric Architecture
+	+ Clean Architecture
+		+ Domain
+		+ Application
+		+ Presentation
+		+ Infrastryure
+	+ Onion
+	+ Hexagonal
+
+Styles
+	Modular Monolithic
+	Microservice
+	Service Oriented
+	Layered
+
+Patterns
+	CQRS
+	Circuit Breaker
+	Clean Architecture
+	Hexagonal Architecture
+
+
 Next Session:
+		-> Imp
 	+ DDD ?
 		-> imp
-	+ Architecture ? 
 	+ HLD vs LLD
-	+ Architecture Pattern vs style
-		-> Imp
+
+Next Next Session:
+	+ CQRS 
+	+ Command Query Segregation
+	+ MediatR

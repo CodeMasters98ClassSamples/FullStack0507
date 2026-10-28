@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FullStack0507.MyStoreWebApi\FullStack0507.MyStoreWebApi.csproj" />
     <ProjectReference Include="..\FullStack0507.MyWebApi\FullStack0507.MyWebApi.csproj" />
   </ItemGroup>
 

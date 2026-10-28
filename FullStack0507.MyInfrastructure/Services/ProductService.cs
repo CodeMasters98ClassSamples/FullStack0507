@@ -1,7 +1,6 @@
-﻿using FullStack0507.MyWebApi.Data;
+﻿using FullStack0507.MyDomain.Entites;
+using FullStack0507.MyInfrastructure.Persistence.Contexts;
 using FullStack0507.MyWebApi.Intefaces;
-using FullStack0507.MyWebApi.Models;
-using System;
 
 namespace FullStack0507.MyWebApi.Services;
 

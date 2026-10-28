@@ -1,4 +1,4 @@
-﻿namespace FullStack0507.MyWebApi.Contracts;
+﻿namespace FullStack0507.MyApplication.Contracts;
 
 public interface ICustomService<T> 
 {
