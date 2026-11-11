@@ -1,5 +1,5 @@
 ﻿using Asp.Versioning;
-using FullStack0507.MyDomain.Entites;
+using FullStack0507.MyDomain.Entities.ProductContext;
 using FullStack0507.MyWebApi.Dtos;
 using FullStack0507.MyWebApi.Intefaces;
 using FullStack0507.MyWebApi.Wrappers;
@@ -38,13 +38,10 @@ public class ProductController : ControllerBase
         }
         //Map Dto -> Model
         //Extension method, Package -> mapster , automapper
-        Product product = new Product()
-        {
-            Price = dto.price,
-            Description = dto.description,
-            Name = dto.name,
-            Barcode = dto.barcode,
-        };
+        if (dto.price == 0)
+            return BadRequest();
+
+        Product product = Product.Add(dto.name, dto.description, dto.price, dto.barcode);
         var result = Result.Success(_productService.Add(product));
 
         return Ok(result);
@@ -53,13 +50,13 @@ public class ProductController : ControllerBase
     [HttpPut]
     public string Update(string description, string name)
     {
-        Product product = new Product()
-        {
-            Price = 100000,
-            Description = description,
-            Name = name,
-        };
-        bool result = _productService.Update(product);
+        //Product product = new Product()
+        //{
+        //    Price = 100000,
+        //    Description = description,
+        //    Name = name,
+        //};
+        //bool result = _productService.Update(product);
 
         return "";
     }

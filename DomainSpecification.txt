@@ -167,3 +167,32 @@ Next Next Session:
 	+ CQRS 
 	+ Command Query Segregation
 	+ MediatR
+
+
++ Sln 
+	-> Single deployment application
+		
+	-> multiple deploymnet application
+
++ Business
+	Code -> Application Layer
+	Database -> SP , Function , Job 
+
++ Scale
+	+ Data Defensive -> Load
+		+ Increase source
+		+ increase request
+
++ Price -> coupling دلار
+	-> web hook
+		-> api call ->  قواعد قیمت گذاری + قیمت لحظه رو از یک سرویس میگیری
+	-> Background Service
+		-> Fall back strategy
+		-> application or database
+		-> قواعد قیمت گذاری + قیمت لحظه رو از یک سرویس میگیری
+    -> Background Job .net
+	-> Hangfire ,..
+
++ Service Down -> Dupplicate Sms -> Log , Idempotancy ,..
++ User Data? ->
++ Api Wait

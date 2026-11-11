@@ -1,4 +1,4 @@
-﻿using FullStack0507.MyDomain.Entites;
+﻿using FullStack0507.MyDomain.Entities.ProductContext;
 using FullStack0507.MyInfrastructure.Persistence.Contexts;
 using FullStack0507.MyWebApi.Intefaces;
 

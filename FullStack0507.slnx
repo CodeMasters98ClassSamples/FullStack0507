@@ -4,6 +4,8 @@
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/BasketService/" />
+  <Folder Name="/src/Identity/" />
+  <Folder Name="/src/Notification/" />
   <Folder Name="/src/ProductService/">
     <Project Path="FullStack0507.MyInfrastructure/FullStack0507.MyInfrastructure.csproj" Id="a947108c-e659-4aa8-bedb-2766fe49ca57" />
   </Folder>
@@ -21,6 +23,8 @@
     <Project Path="FullStack0507.ServiceDefaults/FullStack0507.ServiceDefaults.csproj" />
   </Folder>
   <Folder Name="/src/Shared/">
+    <Project Path="FullStack0507.MySharedApplication/FullStack0507.MySharedApplication.csproj" Id="fa100bc8-d20c-47aa-9d09-c51fa6136ad3" />
     <Project Path="FullStack0507.MySharedPresentation/FullStack0507.MySharedPresentation.csproj" Id="afad2406-89c9-4003-a139-9b7796b1de5d" />
   </Folder>
+  <Folder Name="/src/Supporting/" />
 </Solution>
