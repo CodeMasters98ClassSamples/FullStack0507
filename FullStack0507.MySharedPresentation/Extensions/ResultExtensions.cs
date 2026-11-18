@@ -1,4 +1,4 @@
-﻿using FullStack0507.MyWebApi.Wrappers;
+﻿using FullStack0507.MySharedApplication.Wrappers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FullStack0507.MySharedPresentation.Extensions;

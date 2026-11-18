@@ -2,7 +2,7 @@
 using FullStack0507.MyDomain.Entities.ProductContext;
 using FullStack0507.MyWebApi.Dtos;
 using FullStack0507.MyWebApi.Intefaces;
-using FullStack0507.MyWebApi.Wrappers;
+using FullStack0507.MySharedApplication.Wrappers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -36,11 +36,9 @@ public class ProductController : ControllerBase
         {
             return BadRequest(Result.Failure(Error.InValidPrice, status: HttpStatusCode.BadRequest));
         }
+
         //Map Dto -> Model
         //Extension method, Package -> mapster , automapper
-        if (dto.price == 0)
-            return BadRequest();
-
         Product product = Product.Add(dto.name, dto.description, dto.price, dto.barcode);
         var result = Result.Success(_productService.Add(product));
 

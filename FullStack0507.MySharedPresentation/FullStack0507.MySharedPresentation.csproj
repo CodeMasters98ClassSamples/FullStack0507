@@ -6,4 +6,17 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Asp.Versioning.Mvc" Version="10.2.1" />
+		<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="10.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\FullStack0507.MySharedApplication\FullStack0507.MySharedApplication.csproj" />
+	</ItemGroup>
+
 </Project>

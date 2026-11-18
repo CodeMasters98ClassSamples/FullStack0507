@@ -196,3 +196,31 @@ Next Next Session:
 + Service Down -> Dupplicate Sms -> Log , Idempotancy ,..
 + User Data? ->
 + Api Wait
+
+dotnet -> dotnet ef ...
+ef tools -> ...
+
+stratup project ?
+default project -> persistnace ? -> context
+
+migration file
+apply change
+
+multi context ?
+	- business domain -> BC
+	- shcema
+	- replication
+
+change
+	-> code
+	-> db
+	-> dependancy
+
++ https://console.liara.ir/one-click-apps
+
++ sandbox
++ namespace and cgroup
++ Intro Docker
++ Microfrontend
++ Add migration & build
++ CPM -> https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management

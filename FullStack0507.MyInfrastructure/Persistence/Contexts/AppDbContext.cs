@@ -15,5 +15,25 @@ public class AppDbContext : DbContext
     //Bind
     //Table
     //Seed
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Product>(builder =>
+        {
+            //Value object -> owned type (same table, column named 'Price')
+            builder.OwnsOne(product => product.Price, price =>
+            {
+                price.Property(p => p.Value)
+                    .HasColumnName("Price")
+                    .HasPrecision(18, 2)
+                    .IsRequired();
+
+                price.Property(p => p.Currency)
+                    .HasColumnName("PriceCurrency")
+                    .HasMaxLength(3)
+                    .IsRequired();
+            });
+        });
+    }
 }

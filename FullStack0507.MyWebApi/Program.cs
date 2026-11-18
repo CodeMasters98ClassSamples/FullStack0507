@@ -2,7 +2,7 @@ using Asp.Versioning;
 using FullStack0507.MyInfrastructure;
 using Microsoft.EntityFrameworkCore;
 using FullStack0507.MyApplication;
-using FullStack0507.MyWebApi.Extensions;
+using FullStack0507.MySharedPresentation.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

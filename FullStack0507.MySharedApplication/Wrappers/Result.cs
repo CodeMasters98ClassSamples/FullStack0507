@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace FullStack0507.MyWebApi.Wrappers;
+namespace FullStack0507.MySharedApplication.Wrappers;
 
 public record Error(string Code, string Message)
 {

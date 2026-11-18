@@ -64,13 +64,10 @@ public class ProductService : IProductService
     public bool Update(Product product)
     {
         var productFromDb = _appDbContext.Products.FirstOrDefault(x => x.Id == product.Id);
-        if (product is null)
+        if (productFromDb is null)
             return false;
 
-        productFromDb.Price = product.Price;
-        productFromDb.Description = product.Description;
-        productFromDb.Name = product.Name;
-        productFromDb.Barcode = product.Barcode;
+        productFromDb.Update(product.Name, product.Description, product.Price, product.Barcode);
         _appDbContext.SaveChanges();
 
         return true;
