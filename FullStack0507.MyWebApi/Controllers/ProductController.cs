@@ -20,9 +20,11 @@ public class ProductController : ControllerBase
     //Design Pattern -> Resuable code
     //Dependancy Injection -> Pattern
     private IProductService _productService;
-    public ProductController(IProductService productService)
+    private ILogger<ProductController> _logger;
+    public ProductController(IProductService productService, ILogger<ProductController> logger)
     {
         _productService = productService;
+        _logger = logger;
     }
 
     //Best practise
@@ -30,6 +32,8 @@ public class ProductController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Add([FromBody] AddProductRequest dto)
     {
+        _logger.LogDebug("ASKNDKLAD");
+
         //SaveData -> Data Application (Database, cache , file , .. , queue)
 
         if (dto.price <= 0)

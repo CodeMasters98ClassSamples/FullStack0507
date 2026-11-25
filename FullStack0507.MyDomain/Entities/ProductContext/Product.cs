@@ -16,7 +16,8 @@ public class Product
     public DateTime ExpireAt { get; private set; }
     public List<ProductImages> Images { get; set; }
     public List<ProductAttributes> Attributes { get; set; }
-
+    public bool IsDeleted { get; set; }
+    public DateTime DeletedAt { get; set; }
     public void Update(string name, string description, decimal price, string barcode)
     {
         if (string.IsNullOrEmpty(name) || name.Length <= 2)

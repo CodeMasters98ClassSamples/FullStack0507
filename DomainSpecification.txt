@@ -216,8 +216,10 @@ change
 	-> db
 	-> dependancy
 
-+ https://console.liara.ir/one-click-apps
++ CPM -> Central Package!!
++ EF 
 
++ https://console.liara.ir/one-click-apps
 + sandbox
 + namespace and cgroup
 + Intro Docker
